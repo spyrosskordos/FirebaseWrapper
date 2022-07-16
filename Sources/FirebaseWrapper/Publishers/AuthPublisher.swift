@@ -17,7 +17,7 @@ extension Publishers {
         func receive<S>(subscriber: S)
         where S: Subscriber, Self.Failure == S.Failure, Self.Output == S.Input {
             let authSubscription = AuthSubscription(subscriber: subscriber)
-            subscriber.receive(authSubscription)
+            subscriber.receive(subscription: authSubscription)
         }
 
         class AuthSubscription<S: Subscriber>: Subscription
