@@ -8,8 +8,8 @@
 import Combine
 import FirebaseAuth
 
-extension Publishers {
-    public struct AuthPublisher: Publisher {
+public extension Publishers {
+    struct AuthPublisher: Publisher {
         public typealias Output = User?
 
         public typealias Failure = Never
@@ -44,3 +44,5 @@ extension Publishers {
         }
     }
 }
+
+
