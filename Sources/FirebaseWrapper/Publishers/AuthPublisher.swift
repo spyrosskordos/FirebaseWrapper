@@ -10,6 +10,7 @@ import FirebaseAuth
 
 public extension Publishers {
     struct AuthPublisher: Publisher {
+        public init(){ }
         public typealias Output = User?
 
         public typealias Failure = Never
