@@ -26,7 +26,7 @@ extension Publishers {
             private var subscriber: S?
             private var handler: AuthStateDidChangeListenerHandle?
 
-            init(subscriber: S) {
+            public init(subscriber: S) {
                 self.subscriber = subscriber
                 handler = Auth.auth().addStateDidChangeListener { auth, user in
                     _ = subscriber.receive(user)
